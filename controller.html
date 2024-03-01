@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scoreboard Controller</title>
+		<link rel="stylesheet" href="./CSS/controller.css" />
+	</head>
+	<body>
+		<row>
+			<column id="side-labels">
+				<row>Score</row>
+				<row>Errors</row>
+				<row>Time Outs</row>
+			</column>
+			<column>
+				<row>
+					<fieldset>
+						<legend>Team 1</legend>
+						<column class="team-container">
+							<row class="score-row">
+								<button class="number-button" onclick="changeScoreBy(0, -10);">-10</button>
+								<button class="number-button" onclick="changeScoreBy(0, -5);">-5</button>
+								<div class="input-container">
+									<input id="team1-score" class="new-score" type="number" value="0" />
+									<label class="score-difference" for="team1-score"></label>
+								</div>
+								<button class="number-button" onclick="changeScoreBy(0, 5);">+5</button>
+								<button class="number-button" onclick="changeScoreBy(0, 10);">+10</button>
+							</row>
+							<hr />
+							<row class="errors-row">
+								<button class="number-button" onclick="changeErrorsBy(0, -1);">-1</button>
+								<div class="input-container">
+									<input id="team1-errors" class="new-errors" type="number" value="0" />
+									<label class="errors-difference" for="team1-errors"></label>
+								</div>
+								<button class="number-button" onclick="changeErrorsBy(0, 1);">+1</button>
+							</row>
+							<hr />
+							<row class="timeouts-row">
+								<button class="number-button" onclick="changeTimeOutsBy(0, -1);">-1</button>
+								<div class="input-container">
+									<input id="team1-timeouts" class="new-timeouts" type="number" value="0" />
+									<label class="timeouts-difference" for="team1-timeouts"></label>
+								</div>
+								<button class="number-button" onclick="changeTimeOutsBy(0, 1);">+1</button>
+							</row>
+						</column>
+					</fieldset>
+					<fieldset>
+						<legend>Team 2</legend>
+						<column class="team-container">
+							<row class="score-row">
+								<button class="number-button" onclick="changeScoreBy(1, -10);">-10</button>
+								<button class="number-button" onclick="changeScoreBy(1, -5);">-5</button>
+								<div class="input-container">
+									<input id="team2-score" class="new-score" type="number" value="0" placeholder="0" />
+									<label class="score-difference" for="team2-score"></label>
+								</div>
+								<button class="number-button" onclick="changeScoreBy(1, 5);">+5</button>
+								<button class="number-button" onclick="changeScoreBy(1, 10);">+10</button>
+							</row>
+							<hr />
+							<row class="errors-row">
+								<button class="number-button" onclick="changeErrorsBy(1, -1);">-1</button>
+								<div class="input-container">
+									<input id="team2-errors" class="new-errors" type="number" value="0" />
+									<label class="errors-difference" for="team2-errors"></label>
+								</div>
+								<button class="number-button" onclick="changeErrorsBy(1, 1);">+1</button>
+							</row>
+							<hr />
+							<row class="timeouts-row">
+								<button class="number-button" onclick="changeTimeOutsBy(1, -1);">-1</button>
+								<div class="input-container">
+									<input id="team2-timeouts" class="new-timeouts" type="number" value="0" />
+									<label class="timeouts-difference" for="team2-timeouts"></label>
+								</div>
+								<button class="number-button" onclick="changeTimeOutsBy(1, 1);">+1</button>
+							</row>
+						</column>
+					</fieldset>
+				</row>
+				<row>
+					<button id="push-button" onclick="pushValues();">Push Changed Values</button>
+					<button id="pull-button">Pull Values From Scoreboard</button>
+					<button id="reset-button" onclick="resetValues();">Reset Values</button>
+				</row>
+			</column>
+		</row>
+		
+		<script src="./JS/controller.js"></script>
+	</body>
+</html>

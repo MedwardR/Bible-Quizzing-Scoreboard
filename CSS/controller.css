@@ -1,0 +1,157 @@
+* {
+	font-size: inherit;
+}
+:root {
+	--screen: min(0.8vw, 1vh);
+	--spacing: max(calc(1.5 * var(--screen)), 10px);
+	--row-height: max(calc(5 * var(--screen)), 40px);
+	--score-row-height: max(calc(6 * var(--screen)), 50px);
+	--border-radius: max(calc(1.5 * var(--screen)), 15px);
+	background-color: white;
+	color: black;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: max(calc(1.9 * var(--screen)), 15px);
+}
+body {
+	display: flex;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+row, column {
+	display: flex;
+	flex: 0;
+	gap: var(--spacing);
+}
+row {
+	flex-direction: row;
+}
+column {
+	flex-direction: column;
+}
+fieldset, input, button {
+	border: solid 1px #000;
+	border-radius: var(--border-radius);
+}
+fieldset {
+	padding: var(--spacing);
+	padding-top: calc(0.65 * var(--spacing));
+}
+input, button {
+	border: solid 1px #00000022;
+	text-align: center;
+}
+button {
+	background-color: #e9e9ed;
+	color: #000;
+	cursor: pointer;
+	transition: background-color 0.15s ease;
+}
+button:hover {
+	background-color: #d5d5dd;
+}
+button:active {
+	background-color: #b9b9c6;
+}
+input {
+	transition: color 0.25s linear; /* Make sure this timing is the same as 'setTimeout(..., here)' in 'controller.js' */
+}
+hr {
+	width: 100%;
+	border: solid 1px #00000022;
+}
+.score-row {
+	min-height: var(--score-row-height);
+}
+.errors-row, .timeouts-row {
+	min-height: var(--row-height);
+}
+.new-score, .new-errors, .new-timeouts {
+	width: max(calc(8 * var(--screen)), 60px);
+}
+.new-score {
+	height: var(--score-row-height);
+}
+.new-errors, .new-timeouts {
+	height: var(--row-height);
+}
+.number-button {
+	flex: 1;
+	min-width: var(--row-height);
+}
+.input-container {
+	position: relative;
+}
+.input-container > label {
+	position: absolute;
+	bottom: -15%;
+	right: -4%;
+	padding: 0 0 0 3px;
+	background-color: #ffffff00;
+	color: #00000000;
+	font-family: monospace;
+	font-weight: bold;
+	text-align: center;
+	transition: color 0.25s linear, background-color 0.25s linear; /* Make sure these timings are the same as 'setTimeout(..., here)' in 'controller.js' */
+}
+#side-labels {
+	padding-top: calc(0.65 * var(--spacing));
+	padding-bottom: calc(var(--spacing) + var(--row-height));
+}
+#side-labels > * {
+	flex: 1;
+	justify-content: right;
+	align-items: center;
+}
+#side-labels > *:first-child {
+	flex: 1.4;
+}
+#push-button, #pull-button, #reset-button {
+	height: var(--row-height);
+}
+#push-button {
+	background-color: #2ecc71;
+	color: white;
+	flex: 0.8;
+}
+#push-button:hover {
+	background-color: #2abb67;
+}
+#push-button:active {
+	background-color: #219150;
+}
+#pull-button {
+	background-color: #3498db;
+	color: white;
+	flex: 1;
+}
+#pull-button:hover {
+	background-color: #2283c3;
+}
+#pull-button:active {
+	background-color: #1b6698;
+}
+#reset-button {
+	background-color: #e74c3c;
+	color: white;
+	flex: 0.6;
+}
+#reset-button:hover {
+	background-color: #cc2b19;
+}
+#reset-button:active {
+	background-color: #9f2214;
+}
+
+/* Disable <input> arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
