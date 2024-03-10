@@ -3,5 +3,8 @@
 
 _**Initial Release is still in progress**_
 
+**_All the glory be to God!_**
+
 # Screenshots
-![image](https://github.com/MedwardR/Bible-Quizzing-Scoreboard/assets/117788102/14814ed4-e15e-4e62-8763-24f69211aaac)
+![image](https://github.com/MedwardR/Bible-Quizzing-Scoreboard/assets/117788102/ff128722-2e15-4c98-8ec3-e745b4aca729)
+![image](https://github.com/MedwardR/Bible-Quizzing-Scoreboard/assets/117788102/d5adeb2a-463a-4456-a173-81c9c8a49134)
